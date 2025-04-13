@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 60, 30, 50;
+  --background-start-rgb: 255, 250, 255;
+  --background-end-rgb: 250, 245, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-image: url("placeholder-pattern.png");
+  background-repeat: repeat;
+  background-size: 400px;
+  background-opacity: 0.1;
+  margin: 0;
+  font-family: "Lora", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold mb-4 text-rose-800;
+  }
+  h2 {
+    @apply text-2xl font-semibold mb-3 text-purple-700;
+  }
+  h3 {
+    @apply text-xl font-medium mb-2 text-pink-700;
+  }
+  p {
+    @apply mb-4;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-lg shadow-md p-6 mb-6 border border-pink-100 relative overflow-hidden;
+  }
+  .card::before {
+    content: "";
+    @apply absolute top-0 right-0 w-32 h-32 bg-contain bg-no-repeat opacity-10;
+    background-image: url("placeholder-pattern.png");
+  }
+  .btn-primary {
+    @apply bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full transition-colors shadow-md border border-rose-300;
+  }
+  .form-input {
+    @apply w-full p-2 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white/90;
+  }
+  .floral-divider {
+    @apply my-8 h-4 bg-contain bg-center bg-no-repeat;
+    background-image: url("placeholder-pattern.png");
+  }
+  .floral-card {
+    @apply card border-pink-200 bg-gradient-to-br from-white/90 to-pink-50/90;
+  }
+}
+

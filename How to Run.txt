@@ -1,0 +1,10 @@
+PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris> cd .\backend\
+PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris\backend> python -m venv venv  
+PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris\backend> venv\Scripts\activate
+(venv) PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris\backend> cd .\model\
+(venv) PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris\backend\model> python train_model.py
+Training Accuracy: 0.9667
+Testing Accuracy: 1.0000
+(venv) PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris\backend\model> cd..                 
+(venv) PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris\backend> cd .\api\  
+(venv) PS C:\Users\Admin\OneDrive\Desktop\NEWiris\iris\backend\api> python app.py   
